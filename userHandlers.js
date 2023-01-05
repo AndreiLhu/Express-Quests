@@ -1,6 +1,6 @@
 const database = require('./database');
 
-//get all users
+// get all users
 
 const getUsers = (req, res) => {
   let sql = 'select * from users';
