@@ -20,6 +20,16 @@ app.listen(port, (err) => {
   }
 });
 
+// userHandlers
+
+const userHandlers = require('./userHandlers');
+
+app.get('/api/users', userHandlers.getUsers);
+app.get('/api/users/:id', userHandlers.getUserById);
+app.post('/api/users', userHandlers.postUser);
+app.put('/api/users/:id', userHandlers.updateUser);
+app.delete('/api/users/:id', userHandlers.deleteUser);
+
 // movieHandler
 
 const movieHandlers = require('./movieHandlers');
